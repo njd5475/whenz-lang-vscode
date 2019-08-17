@@ -1,0 +1,52 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "whenz-lang",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#references"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#literals"
+		},
+		{
+			"include": "#operators"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.whenz",
+				"match": "\\b(when|do|once)\\b"
+			},
+			{
+				"name":"keyword.control.other.whenz",
+				"match": "\\b(event|trigger|define)\\b"
+			}]
+		},
+		"comments": {
+			"name":"comment.line.double-dash.whenz",
+			"begin": "//",
+			"end": "$"
+		},
+		"references": {
+			"name":"variable.language.whenz",
+			"begin": "(@|&)",
+			"end" : "[^a-zA-Z0-9\\.]"
+		},
+		"literals": {
+			"name":"constant.numeric.whenz6",
+			"match": "[0-9]"
+		},
+		"operators": {
+			"name":"keyword.operator.whenz",
+			"match": "=|==|\\+|-|\\*"
+		}
+	},
+	"scopeName": "source.whenz"
+}

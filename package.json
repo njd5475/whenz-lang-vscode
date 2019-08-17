@@ -1,0 +1,25 @@
+{
+    "name": "whenz",
+    "displayName": "Whenz-lang",
+    "description": "Official Whenz language support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.37.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "whenz",
+            "aliases": ["whenz-lang", "whenz"],
+            "extensions": [".whenz",".whz"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "whenz",
+            "scopeName": "source.whenz",
+            "path": "./syntaxes/whenz.tmLanguage.json"
+        }]
+    }
+}
